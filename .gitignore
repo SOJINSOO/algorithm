@@ -1,0 +1,4 @@
+#ignored files
+/out/
+/.idea/
+/algorithm.iml

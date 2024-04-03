@@ -1,25 +1,24 @@
-package section02.problem02;
+package section02.problem07;
 
 import java.util.Scanner;
-
 public class Main {
 
     public int solution(int n, int[] intArray) {
         int answer = 0;
 
-        int max = intArray[0];
-        answer++;
+        int cnt = 0;
 
-        for (int i = 1; i < n; i++) {
-            if (intArray[i] > max) {
-                max = intArray[i];
-                answer++;
+        for (int i = 0; i < n; i++) {
+            if (intArray[i] == 0) {
+                cnt = 0;
+            } else {
+                cnt++;
+                answer += cnt;
             }
         }
 
         return answer;
     }
-
     public static void main(String args[]) {
         Main main = new Main();
         Scanner scanner = new Scanner(System.in);
@@ -31,6 +30,5 @@ public class Main {
         }
 
         System.out.print(main.solution(n, intArray));
-
     }
 }
